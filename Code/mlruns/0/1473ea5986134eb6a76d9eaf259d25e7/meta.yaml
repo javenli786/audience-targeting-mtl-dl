@@ -1,0 +1,15 @@
+artifact_uri: file:///G:/%E6%88%91%E7%9A%84%E9%9B%B2%E7%AB%AF%E7%A1%AC%E7%A2%9F/GitHub_Desktop/DL_MultiTaskLearning_DonationMaximization_/Code/mlruns/0/1473ea5986134eb6a76d9eaf259d25e7/artifacts
+end_time: 1751328123926
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1473ea5986134eb6a76d9eaf259d25e7
+run_name: Optuna_Optimization_20250701_0802
+run_uuid: 1473ea5986134eb6a76d9eaf259d25e7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751328122765
+status: 4
+tags: []
+user_id: Reazeng
