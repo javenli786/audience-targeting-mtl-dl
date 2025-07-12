@@ -1,7 +1,7 @@
 import mlflow
 from mlflow.tracking import MlflowClient
 
-def Predict_Production_Model(model_name, input_data):
+def generate_predictions(model_name, input_data):
     """
     Predict with the production model version
     
@@ -22,7 +22,7 @@ def Predict_Production_Model(model_name, input_data):
     
     # Load the model
     model_uri = f"models:/{model_name}/{production_version.version}"
-    model = mlflow.pyfunc.load_model(model_uri)
+    model = mlflow.keras.load_model(model_uri)
     
     # Make predictions
     predictions = model.predict(input_data)

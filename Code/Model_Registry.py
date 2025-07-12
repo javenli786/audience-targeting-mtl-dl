@@ -1,7 +1,7 @@
 import mlflow
 from mlflow.tracking import MlflowClient
 
-def Transition_to_Production(model_name):
+def register_model(model_name):
     
     """
     Transition the best model version to production and archive others
@@ -36,7 +36,7 @@ def Transition_to_Production(model_name):
             stage="Production"
         )
         
-        # Archive other Versions
+        # Archive other versions
         for v in versions:
             if v.version != best_version and v.current_stage != "Archived":
                 client.transition_model_version_stage(
@@ -50,5 +50,3 @@ def Transition_to_Production(model_name):
     else:
         print(f"No production-level model for {model_name}")
         return None
-    
-Transition_to_Production("DonationMaximization_MTL_Model")

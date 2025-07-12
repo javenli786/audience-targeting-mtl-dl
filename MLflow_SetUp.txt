@@ -1,5 +1,23 @@
+Anaconda Prompt輸入以下指令
+
+本機
 mlflow server ^
   --backend-store-uri sqlite:///mlflow.db ^
   --default-artifact-root ./artifacts ^
   --host 127.0.0.1 ^
   --port 5000
+
+
+任何位址
+mlflow server ^
+  --backend-store-uri sqlite:///mlflow.db ^
+  --default-artifact-root ./artifacts ^
+  --host 0.0.0.0 ^
+  --port 5000
+
+
+
+mlflow.db: 資料庫名稱
+sqlite: 資料庫類型
+
+
