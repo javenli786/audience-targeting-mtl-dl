@@ -11,10 +11,10 @@ def objective(trial,data_dict):
     """
     Set up the objective function for Optuna hyperparameter optimization.
     """
-    X_train_encoded = data_dict['X_train_encoded']
+    X_train = data_dict['X_train']
     Y_regression_train = data_dict['Y_regression_train']
     Y_classification_train = data_dict['Y_classification_train']
-    X_val_encoded = data_dict['X_val_encoded']
+    X_val = data_dict['X_val']
     Y_regression_val = data_dict['Y_regression_val']
     Y_classification_val = data_dict['Y_classification_val']
     
@@ -30,7 +30,7 @@ def objective(trial,data_dict):
         mlflow.set_tag("trial_num", trial_num)
         mlflow.log_params({**params, "batch_size": 32, "epochs": 50, "run_id": run.info.run_id})
         
-        model = create_model(params, X_train_encoded.shape[1:])
+        model = create_model(params, X_train.shape[1:])
         
         class_weights = compute_class_weight('balanced', classes=Y_classification_train.unique(), y=Y_classification_train)
         weight_map = {i: w for i, w in zip(Y_classification_train.unique(), class_weights)}
@@ -39,7 +39,7 @@ def objective(trial,data_dict):
         # Train the model
         train_targets = {'regression_output': Y_regression_train, 'classification_output': Y_classification_train}
         val_targets = {'regression_output': Y_regression_val, 'classification_output': Y_classification_val}
-        history = train_model(model, X_train_encoded, train_targets, X_val_encoded, val_targets, sample_weights)
+        history = train_model(model, X_train, train_targets, X_val, val_targets, sample_weights)
         
         # log results
         log_results(trial, run, history, model, trial_num)
