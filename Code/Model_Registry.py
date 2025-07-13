@@ -13,7 +13,7 @@ def register_model(model_name):
     """
 
     client = MlflowClient()
-    
+
     versions = client.search_model_versions(f"name='{model_name}'")
     
     best_version = None

@@ -24,7 +24,7 @@ def generate_predictions(model_name, input_data):
     model_uri = f"models:/{model_name}/{production_version.version}"
     model = mlflow.keras.load_model(model_uri)
     
-    # Make predictions
+    # Generate predictions
     predictions = model.predict(input_data)
     
     return predictions
