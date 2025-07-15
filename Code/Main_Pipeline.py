@@ -9,12 +9,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Import modules
-from Data_Preparation import prepare_data
-from MLflow_Setup import setup_mlflow, log_results
-from Model_Building import create_model, train_model
-from Hyperparameters_Optimization import optimize_hyperparameters
-from Model_Prediction import generate_predictions
-from Model_Registry import register_model
+from data_preparation import prepare_data
+from mlflow_setup import setup_mlflow, log_results
+from model_building import create_model, train_model
+from hyperparameter_optimization import optimize_hyperparameters
+from model_prediction import generate_predictions
+from model_registry import register_model
 
 TRACKING_URI = 'http://192.168.1.162:5000'
 EXPERIMENT_NAME = 'DonationMaximization'

@@ -4,8 +4,8 @@ from datetime import datetime
 import numpy as np
 from sklearn.utils.class_weight import compute_class_weight
 
-from Model_Building import create_model, train_model
-from MLflow_Setup import log_results
+from model_building import create_model, train_model
+from mlflow_setup import log_results
 
 def objective(trial,data_dict):
     """
