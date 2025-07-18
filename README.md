@@ -27,3 +27,25 @@
 #### Feature importance are quantified applying SHAP.
 ![](image\ShapValue_Classification.png "Figure 3: Barplot Manifesting SHAP Value for Classification Task")
 ![](image\ShapValueRegression.png "Figure 4: Barplot exhibiting SHAP Value for Regression Task")
+
+---
+
+# 2. Production
+
+### 2.1. [Data Preparation](src/data_preparation.py)
+
+### 2.2. [MLflow Setup](src/mlflow_setup.py)
+
+### 2.3. [Model Building](src/model_building.py)
+
+### 2.4. [Hyperparameter Optimization](src/hyperparameter_optimization.py)
+
+### 2.5. [Model Prediction](src/model_prediction.py)
+
+### 2.6. [Main_PiPeline](src/main.py)
+
+---
+
+### **Contact**
+#### Feel free to contact for further information.
+#### **LinkedIn:** [LinkedIn Link](https://www.linkedin.com/in/chih-peng-javen-li-7b35561b9/)
