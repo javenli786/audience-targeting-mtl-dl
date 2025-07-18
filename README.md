@@ -7,7 +7,7 @@
 
 # 1. [Experimentation](src/experimentation.ipynb)
 ### The experiment exhibit the business solution for targeting audiences, including data preparation, model building, hyperparameter tuning, model evaluation, and feature importance analysis.
-![](Image/Workflow_Experimentation.png)
+![](image/Workflow_Experimentation.png)
 
 ### 1.1. Data Preparation
 #### Pandas and Target Encoder are utilized to prepare data.
