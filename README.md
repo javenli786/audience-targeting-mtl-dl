@@ -1,4 +1,4 @@
-# **DL_MultiTaskLearning_DonationMaximization**
+# **DonationMaximization_MutiTaskLearning**
 ### This project construct an business solution─an automated multi-task learning model─for the NPO, enabling the creation of outreach list and development of the persona for campaign design.
 ### Expected Outcome
 - #### Efficiency of selecting donors enhance 75%
